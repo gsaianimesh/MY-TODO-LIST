@@ -176,19 +176,19 @@ const calculateTimeLeft = (reminderTime) => {
 
     if (timeDiff <= 0) {
         timeLeftText = "Overdue";
-        iconPath = "img/over.png";
+        iconPath = "over.png";
         timeLeftClass = "overdue";
     } else if (timeDiff < 60 * 60 * 1000) {
         timeLeftText = "Less than 1 hour";
-        iconPath = "img/due.png";
+        iconPath = "due.png";
         timeLeftClass = "due-soon";
     } else if (timeDiff < 24 * 60 * 60 * 1000) {
         timeLeftText = `In ${Math.floor(timeDiff / (60 * 60 * 1000))} hours`;
-        iconPath = "img/warning.png";
+        iconPath = "warning.png";
         timeLeftClass = "warning";
     } else {
         timeLeftText = "Plenty of time";
-        iconPath = "img/attention.png";
+        iconPath = "attention.png";
         timeLeftClass = "attention";
     }
 
