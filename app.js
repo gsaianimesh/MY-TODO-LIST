@@ -125,7 +125,7 @@ const updateTasksList = () => {
         const { timeLeftText, timeLeftClass, iconPath } = calculateTimeLeft(task.reminderTime);
 
         const taskContent = task.revealed ? task.text : "Secret Task";
-        const showButton = task.isSecret && !task.revealed ? `<button onclick="revealTask(${index})">Show</button>` : "";
+        const showButton = task.isSecret && !task.revealed ? `<button onclick="revealTask(${index})"><img src="unlocked.png" onclick="editTask(${index})" /></button>` : "";
 
         listItem.innerHTML = `
             <div class="task ${task.completed ? 'completed' : ''}">
